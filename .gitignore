@@ -18,6 +18,9 @@
 .env.test.local
 .env.production.local
 
+*.env    #Exclude all env
+!.env_sample #Except for env.sample
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
