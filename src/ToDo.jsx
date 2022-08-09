@@ -1,8 +1,15 @@
 import React from 'react'
 
-const ToDo = () => {
+const style = {}
+
+const ToDo = ({todo}) => {
   return (
-        <li>ToDo</li>
+        <li className={style.li}>
+          <div className={style.row}>
+            <input type="checkbox" />
+            <p className={style.text}>{todo}</p>
+          </div>
+        </li>
     )
 }
 

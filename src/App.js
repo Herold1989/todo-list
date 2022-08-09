@@ -7,7 +7,7 @@ import ToDo from "./ToDo";
 
 function App() {
 
-  const [todos, setTodos] =useState(["Learn React", "Clean the Dishes"])
+  const [todos, setTodos] = useState(["Learn React", "Clean the Dishes"])
 
   return (
     <div className={style.bg}>
@@ -18,7 +18,9 @@ function App() {
         <button className={style.button}><AiOutlinePlus size = {30}/></button>
       </form>
       <ul>
-        <ToDo/>
+        {todos.map((todo, index)=> (
+        <ToDo key={index} todo = {todo}/>
+        ))}
       </ul>
     </div>
 
